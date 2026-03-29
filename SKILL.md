@@ -26,6 +26,23 @@ Detect user's language and respond accordingly.
    입력 분석           테스트 유형 선택       시나리오 도출         케이스 작성       리뷰
 ```
 
+### Step 0: Dedup Check (MANDATORY) / 중복 체크 (필수)
+
+Before writing any test scenario or case, perform these checks:
+테스트 시나리오/케이스를 작성하기 전에 반드시 아래를 확인합니다:
+
+1. **Read dedup policy / 중복 방지 정책 확인**: If `docs/testing/TEST_DEDUP_POLICY.md` exists, read and enforce it
+2. **Search existing tests / 기존 테스트 검색**: `grep -r "대상_엔드포인트_또는_함수" tests/ -l`
+3. **Layer ownership / 계층 소유권 확인**: Each item belongs to ONE layer only
+   - Pure function → unit | API endpoint → api | Browser flow → e2e | OWASP → security
+   - Auth 401/403 → per-feature api file only (NOT bulk security files / 일괄 보안 파일 금지)
+4. **If existing file found / 기존 파일 발견 시**: Add TC to that file (do NOT create new file / 신규 파일 생성 금지)
+5. **Prohibited patterns / 금지 패턴**:
+   - Placeholder TC with no real assertions / 실제 검증 없는 placeholder TC
+   - Duplicate TC across layers / 계층 간 동일 TC 중복
+   - TC for unimplemented features / 미구현 기능에 대한 TC
+   - Aggregation files bundling separate endpoints / 개별 엔드포인트를 묶는 집합 파일
+
 ### Step 1: Analyze Input / 입력 분석
 
 | Source / 소스 | Check / 확인 사항 |
