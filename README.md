@@ -3,10 +3,11 @@
 Web Service Test Documentation Writer Skill for Claude Code.
 
 [![Korean](https://img.shields.io/badge/lang-한글-blue.svg)](README.ko.md)
+[![Chinese](https://img.shields.io/badge/lang-中文-red.svg)](README.zh.md)
 
 ## Overview
 
-This skill generates test scenarios and test cases for web service verification. It supports 7 test types and outputs bilingual (English/Korean) documentation based on user's language.
+This skill generates test scenarios and test cases for web service verification. It supports 7 test types and outputs trilingual (English/Korean/Chinese) documentation based on user's language.
 
 ## Installation
 
@@ -38,6 +39,7 @@ rm webapp-test-docs-writer.skill
 |----------|----------|
 | **English** | "test case", "test scenario", "write tests", "QA documentation" |
 | **Korean** | "테스트 케이스 작성", "테스트 시나리오", "QA 문서" |
+| **Chinese** | "测试用例", "测试场景", "测试文档", "编写测试", "测试用例编写" |
 
 ### Example Prompts
 
@@ -206,6 +208,7 @@ webapp-test-docs-writer/
 ├── SKILL.md                          # Main skill definition
 ├── README.md                         # This file (English)
 ├── README.ko.md                      # Korean documentation
+├── README.zh.md                      # Chinese documentation
 └── references/
     ├── templates.md                  # Common templates
     ├── unit/guide.md                 # Unit test guide

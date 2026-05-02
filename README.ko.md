@@ -3,10 +3,11 @@
 Claude Code용 웹서비스 테스트 문서 작성 스킬.
 
 [![English](https://img.shields.io/badge/lang-English-red.svg)](README.md)
+[![Chinese](https://img.shields.io/badge/lang-中文-red.svg)](README.zh.md)
 
 ## 개요
 
-이 스킬은 웹서비스 검증을 위한 테스트 시나리오와 테스트 케이스를 생성합니다. 7가지 테스트 유형을 지원하며 사용자의 언어에 따라 영어/한글 문서를 출력합니다.
+이 스킬은 웹서비스 검증을 위한 테스트 시나리오와 테스트 케이스를 생성합니다. 7가지 테스트 유형을 지원하며 사용자의 언어에 따라 영어/한글/중국어 문서를 출력합니다.
 
 ## 설치
 
@@ -38,6 +39,7 @@ rm webapp-test-docs-writer.skill
 |------|--------|
 | **영어** | "test case", "test scenario", "write tests", "QA documentation" |
 | **한글** | "테스트 케이스 작성", "테스트 시나리오", "QA 문서" |
+| **중국어** | "测试用例", "测试场景", "测试文档", "编写测试", "测试用例编写" |
 
 ### 예시 프롬프트
 
@@ -206,6 +208,7 @@ webapp-test-docs-writer/
 ├── SKILL.md                          # 메인 스킬 정의
 ├── README.md                         # 영문 문서
 ├── README.ko.md                      # 한글 문서 (이 파일)
+├── README.zh.md                      # 중국어 문서
 └── references/
     ├── templates.md                  # 공통 템플릿
     ├── unit/guide.md                 # 단위 테스트 가이드

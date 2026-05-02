@@ -1,27 +1,27 @@
-# Test Case Common Templates / 테스트 케이스 공통 템플릿
+# Test Case Common Templates / 테스트 케이스 공통 템플릿 / 测试用例通用模板
 
-## Scenario vs Case / 시나리오 vs 케이스 구분
+## Scenario vs Case / 시나리오 vs 케이스 구분 / 场景 vs 用例 区分
 
-| Criteria / 구분 | Test Scenario / 테스트 시나리오 | Test Case / 테스트 케이스 |
-|-----------------|--------------------------------|--------------------------|
-| **Level / 수준** | High-level (What to test) / 상위 | Low-level (How to test) / 하위 |
-| **Perspective / 관점** | Business/User / 비즈니스/사용자 | Executor/Technical / 실행자/기술 |
-| **Detail / 상세도** | Overview / 개괄적 설명 | Specific steps / 구체적 단계 |
-| **Relation / 관계** | 1 Scenario = N Cases | N Cases ⊂ 1 Scenario |
-| **Question / 질문** | "What situation to test?" / "어떤 상황을 테스트?" | "How to test?" / "어떻게 테스트?" |
+| Criteria / 구분 / 标准 | Test Scenario / 테스트 시나리오 / 测试场景 | Test Case / 테스트 케이스 / 测试用例 |
+|-------------------------|--------------------------------------------|-------------------------------------|
+| **Level / 수준 / 层级** | High-level (What to test) / 상위 / 高层 | Low-level (How to test) / 하위 / 低层 |
+| **Perspective / 관점 / 视角** | Business/User / 비즈니스/사용자 / 业务/用户 | Executor/Technical / 실행자/기술 / 执行者/技术 |
+| **Detail / 상세도 / 细节程度** | Overview / 개괄적 설명 / 概述 | Specific steps / 구체적 단계 / 具体步骤 |
+| **Relation / 관계 / 关系** | 1 Scenario = N Cases | N Cases ⊂ 1 Scenario |
+| **Question / 질문 / 问题** | "What situation to test?" / "어떤 상황을 테스트?" / "测试什么情况？" | "How to test?" / "어떻게 테스트?" / "如何测试？" |
 
-### Hierarchy / 계층 구조
+### Hierarchy / 계층 구조 / 层级结构
 
 ```
-Feature / 기능
-└── Test Scenario / 테스트 시나리오 - "What" to test? / "무엇을" 테스트?
-    └── Test Case / 테스트 케이스 - "How" to test? / "어떻게" 테스트?
-        └── Test Step / 테스트 단계 - Execution procedure / 실행 절차
+Feature / 기능 / 功能
+└── Test Scenario / 테스트 시나리오 / 测试场景 - "What" to test? / "무엇을" 테스트? / "测试什么"？
+    └── Test Case / 테스트 케이스 / 测试用例 - "How" to test? / "어떻게" 테스트? / "如何测试"？
+        └── Test Step / 테스트 단계 / 测试步骤 - Execution procedure / 실행 절차 / 执行程序
 ```
 
-### Example: Login Feature / 예시: 로그인 기능
+### Example: Login Feature / 예시: 로그인 기능 / 示例：登录功能
 
-**Scenarios / 시나리오 (3)**
+**Scenarios / 시나리오 / 场景 (3)**
 
 | ID | Scenario / 시나리오 | Type / 유형 |
 |----|---------------------|-------------|
@@ -46,22 +46,22 @@ Feature / 기능
 | TC-LOGIN-006 | Invalid email format / 이메일 형식 오류 | invalid-email | "Invalid email format" / "이메일 형식이 올바르지 않습니다" |
 | TC-LOGIN-007 | Empty password / 비밀번호 빈값 | valid@test.com / (empty) | "Enter password" / "비밀번호를 입력하세요" |
 
-**Full Structure / 전체 구조**
+**Full Structure / 전체 구조 / 完整结构**
 
 ```
-Login Feature / 로그인 기능
-├── SC-LOGIN-001: Successful login / 정상 로그인
-│   ├── TC-LOGIN-001: Email+Password / 이메일+비밀번호
-│   ├── TC-LOGIN-002: Social login / 소셜 로그인
-│   └── TC-LOGIN-003: Auto-login / 자동 로그인
-├── SC-LOGIN-002: Login failure / 로그인 실패
-│   ├── TC-LOGIN-004: Non-existent email / 없는 이메일
-│   ├── TC-LOGIN-005: Wrong password / 잘못된 비밀번호
-│   ├── TC-LOGIN-006: Invalid email format / 이메일 형식 오류
-│   └── TC-LOGIN-007: Empty password / 비밀번호 빈값
-└── SC-LOGIN-003: Account locked / 계정 잠금
-    ├── TC-LOGIN-008: Lock triggered / 잠금 발생
-    └── TC-LOGIN-009: Lock released / 잠금 해제
+Login Feature / 로그인 기능 / 登录功能
+├── SC-LOGIN-001: Successful login / 정상 로그인 / 成功登录
+│   ├── TC-LOGIN-001: Email+Password / 이메일+비밀번호 / 邮箱+密码
+│   ├── TC-LOGIN-002: Social login / 소셜 로그인 / 社交登录
+│   └── TC-LOGIN-003: Auto-login / 자동 로그인 / 自动登录
+├── SC-LOGIN-002: Login failure / 로그인 실패 / 登录失败
+│   ├── TC-LOGIN-004: Non-existent email / 없는 이메일 / 不存在的邮箱
+│   ├── TC-LOGIN-005: Wrong password / 잘못된 비밀번호 / 错误密码
+│   ├── TC-LOGIN-006: Invalid email format / 이메일 형식 오류 / 邮箱格式错误
+│   └── TC-LOGIN-007: Empty password / 비밀번호 빈값 / 密码为空
+└── SC-LOGIN-003: Account locked / 계정 잠금 / 账户锁定
+    ├── TC-LOGIN-008: Lock triggered / 잠금 발생 / 触发锁定
+    └── TC-LOGIN-009: Lock released / 잠금 해제 / 解除锁定
 ```
 
 ---
